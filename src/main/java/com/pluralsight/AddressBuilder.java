@@ -47,19 +47,19 @@ public class AddressBuilder {
         String shippingZip = myScanner.nextLine();
 
         StringBuilder userInfo = new StringBuilder();
-        userInfo.append("Full Name: " + fullName + "\n");
-        userInfo.append("Billing Street: " + billingStreet + "\n");
-        userInfo.append("Billing City: " + billingCity + "\n");
-        userInfo.append("Billing State: " + billingState + "\n");
-        userInfo.append("Billing Zip: " + billingZip + "\n");
-        userInfo.append("Shipping Street: " + shippingStreet + "\n");
-        userInfo.append("Shipping City: " + shippingCity + "\n");
-        userInfo.append("Shipping State: " + shippingState + "\n");
-        userInfo.append("Shipping Zip: " + shippingZip + "\n");
+        System.out.println("Billing Address: ");
+        
+        userInfo.append(fullName + "\n");
+        userInfo.append(billingStreet + "\n");
+        userInfo.append(billingCity + ", " + billingState + " " + billingZip + "\n");
 
-        System.out.println("User Informati
-        System.out.println(userInfo.toString());
+        userInfo.append("\n"); // Add a blank line
 
+        System.out.println("Shipping Address: ");
+        userInfo.append(shippingStreet + "\n");
+        userInfo.append(shippingCity + ", "+ shippingState + " " + shippingZip + "\n");
 
+        String appendedInfo= userInfo.toString();
+        System.out.println(appendedInfo);
     }
 }
